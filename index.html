@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio elements -->
+    <audio id="background-music" src="background.mp3" preload="auto" loop></audio>
+    <audio id="yes-sound" src="yes_sound.mp3" preload="auto"></audio>
+    <audio id="no-sound" src="no_sound.mp3" preload="auto"></audio>
+
+    <div class="container">
+        <!-- Envelope that opens when clicked -->
+        <div class="envelope" onclick="openEnvelope()">
+            <img src="close-envelope.jpeg" alt="Closed Envelope" id="envelope-img">
+        </div>
+
+        <!-- The note/question appears below the envelope -->
+        <div class="note-container" id="note">
+            <p>Do you want to be my Valentine?</p>
+            <button class="btn yes" onclick="handleYesClick()">Yes</button>
+            <button class="btn no" onclick="handleNoClick()">No</button>
+        </div>
+    </div>
+
+    <!-- Full-screen image display -->
+    <div id="fullscreen-image" class="fullscreen">
+        <img id="result-img" src="" alt="Response Image">
+    </div>
+
+    <!-- Animated hearts container -->
+    <div id="hearts-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
